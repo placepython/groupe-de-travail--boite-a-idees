@@ -15,6 +15,7 @@ Les dépendances de ce projet sont gérée avec pipenv comme recommandé dans la
 5. Activez l'environnement virtuel avec `$ pipenv shell`
 6. Exécutez les migrations avec `$ python manage.py migrate`. La version de développement utiliser sqlite comme base de données. La version de production utilise postgresql.
 7. Démarrez le serveur de développement avec `$ python manage.py runserver`
+8. Accédez à l'application sur [http://localhost:8000](http://localhost:8000)
 
 ## Structure générale du projet
 
