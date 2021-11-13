@@ -7,11 +7,12 @@ module.exports = ({ mode }) => {
     return merge({
         mode: `${mode}`,
         entry: {
-            main: './src/index.js'
+            main: path.resolve(__dirname, 'src/index')
         },
         output: {
             path: path.resolve(__dirname, './dist'),
             filename: '[name].[contenthash].bundle.js',
+            publicPath: '/static/',
             clean: true
         },
         module: {
@@ -42,24 +43,24 @@ module.exports = ({ mode }) => {
                     test: /\.(png|svg|jpg|jpeg|gif)$/i,
                     type: 'asset/resource',
                     generator: {
-                        filename: './images/[name].[hash][ext][query]'
+                        filename: 'images/[name].[hash][ext][query]'
                     }
                 },
                 {
                     test: /\.(woff|woff2|eot|ttf|otf)$/i,
                     type: 'asset/resource',
                     generator: {
-                        filename: './fonts/[name].[hash][ext][query]'
+                        filename: 'fonts/[name].[hash][ext][query]'
                     }
                 }
             ]
         },
         plugins: [
             new MiniCssExtractPlugin({
-                filename: "./css/[name].[contenthash].css",
+                filename: "css/[name].[contenthash].css",
                 chunkFilename: "[id].css"
             }),
-            new BundleTracker({filename: './webpack-stats.json'})
+            new BundleTracker({filename: 'webpack-stats.json'})
         ]
     }, require(`./build-utils/webpack/${mode}`));
 };
