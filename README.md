@@ -6,7 +6,7 @@ Cette application utilise le framework django dans sa dernière version 3.2. L'i
 
 ## Installation
 
-Les dépendances de ce projet sont gérée avec pipenv comme recommandé dans la documentation officielle de python. Pour ceux qui ne l'ont pas installé (si la commande `pipenv --version` vous donne une erreur), n'hésitez pas à l'installé à l'aide de pipx comme décrit ici. Une fois que pipenv est installé sur votre système, vous pouvez commencer le développement de ce projet en suivant les instruction ci-dessous:
+Les dépendances de ce projet sont gérée avec pipenv comme recommandé dans la documentation officielle de python. Pour ceux qui ne l'ont pas installé (si la commande `pipenv --version` vous donne une erreur), n'hésitez pas à l'installer à l'aide de pipx comme décrit dans [cette documentation](./docs/installer-pipenv.md). Une fois que pipenv est installé sur votre système, vous pouvez commencer le développement de ce projet en suivant les instruction ci-dessous:
 
 1. Forkez le projet sur votre propre compte github
 2. Cloner votre fork avec git pour obtenir une version locale
