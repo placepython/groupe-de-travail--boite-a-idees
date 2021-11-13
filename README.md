@@ -16,6 +16,15 @@ Les dépendances de ce projet sont gérée avec pipenv comme recommandé dans la
 6. Exécutez les migrations avec `$ python manage.py migrate`. La version de développement utiliser sqlite comme base de données. La version de production utilise postgresql.
 7. Démarrez le serveur de développement avec `$ python manage.py runserver`
 
+## Structure générale du projet
+
+Ce projet utilise une variation de la structure proposée dans le ouvrage [Two
+Scoops of Django](https://www.feldroy.com/books/two-scoops-of-django-3-x), de Audrey et Daniel Greenfield, reconnu pour 
+ses bonnes pratiques. Cette structure s'articule autour d'un répertoire de configuration
+nommé **config** et un répertoire d'applications nommé ici **id3as**. Les templates
+se trouve dans le répertoire templates à la racine du projet et les fichiers
+front dans le répertoire assets (lire [ce README](./assets/README.md) pour le développement du front-end)
+
 ## Applications django
 
 Pour ceux qui s'occupent du front-end, n'hésitez pas à lire la documentation dans 
