@@ -10,7 +10,7 @@ module.exports = ({ mode }) => {
             main: './src/index.js'
         },
         output: {
-            path: path.resolve(__dirname, './static'),
+            path: path.resolve(__dirname, './dist'),
             filename: '[name].[contenthash].bundle.js',
             clean: true
         },
