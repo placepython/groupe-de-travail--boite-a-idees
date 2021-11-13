@@ -1,8 +1,6 @@
 # Environnements
 .env
 .venv/*
-!.venv/.gitkeep
-
 
 # Python cache files
 __pycache__ 
