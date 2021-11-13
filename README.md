@@ -1,4 +1,4 @@
-# Boite à idée
+# Id3as: boite à idée de projets
 
 Ce projet implémente une application de boîte à idée permettant de collecter des idées de projet via leur titre et une description courte optionnelle, de leurs affecter éventuellement des tags et des catégories, et de permettre à un utilisateur d'aimer (éventuellement DownVoter) ou de ne pas aimer (éventuellement UpVoter) pour manifester leur motivation ou non motivation pour le projet proposé.
 
