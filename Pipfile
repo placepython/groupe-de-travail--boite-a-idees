@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-crispy-forms = "*"
+crispy-bootstrap5 = "*"
+django-environ = "*"
+django-webpack-loader = "*"
+
+[dev-packages]
+django-extensions = "*"
+django-debug-toolbar = "*"
+pytest = "*"
+pytest-django = "*"
+pytest-mock = "*"
+pytest-cov = "*"
+pytest-factoryboy = "*"
+
+[requires]
+python_version = "3.9"

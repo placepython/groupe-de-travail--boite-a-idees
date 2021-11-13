@@ -1,0 +1,24 @@
+{% load render_bundle from webpack_loader %}
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block head_styles %}
+    {% render_bundle 'main' 'css' %}
+    {% endblock head_styles %}
+
+    {% block head_scripts %}
+    {% render_bundle 'main' 'js' attrs='defer'%}
+    {% endblock head_scripts %}
+
+    <title>{% block title %}{% endblock title %}</title>
+  </head>
+  <body>
+    {% block content %}{% endblock content %}
+    
+    {% block body_scripts %}
+    {% endblock body_scripts %}
+  </body>
+</html>

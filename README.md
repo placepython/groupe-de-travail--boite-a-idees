@@ -6,7 +6,7 @@ Cette application utilise le framework django dans sa dernière version 3.2. L'i
 
 ## Installation
 
-Les dépendances de ce projet sont gérée avec pipenv comme recommandé dans la documentation officielle de python. Pour ceux qui ne l'ont pas installé (si la commande `pipenv --version` vous donne une erreur), n'hésitez pas à l'installer à l'aide de pipx comme décrit dans [cette documentation](./docs/installer-pipenv.md). Une fois que pipenv est installé sur votre système, vous pouvez commencer le développement de ce projet en suivant les instruction ci-dessous:
+Les dépendances de ce projet sont gérée avec pipenv comme recommandé dans la documentation officielle de python. Pour ceux qui ne l'ont pas installé (si la commande `pipenv --version` vous donne une erreur), n'hésitez pas à l'installer à l'aide de pipx comme décrit dans [cette documentation](./docs/installer-pipenv.md). En plus de pipenv, vous aurez besoin de travailler avec la **version 3.9 de Python**. Une fois que pipenv est installé sur votre système, vous pouvez commencer le développement de ce projet en suivant les instruction ci-dessous:
 
 1. Forkez le projet sur votre propre compte github
 2. Cloner votre fork avec git pour obtenir une version locale
@@ -18,15 +18,27 @@ Les dépendances de ce projet sont gérée avec pipenv comme recommandé dans la
 
 ## Applications django
 
-Le projet a déjà été découpé en applications django comme suit:
+Pour ceux qui s'occupent du front-end, n'hésitez pas à lire la documentation dans 
+[ce REAMDE dédié.](./assets/README.md)
 
-- **projects** implémente les idées de projets
-- **pages** implémente les pages statiques du site
-- **users** implémente le modèle utilisateur et le système d'authentification
-- **profiles** implémente le profil utilisateur avec la posibilité de gérer les idées de projet qu'il a proposées
-- **votes** implémente le système de vote sur les idées de projets
-- **categories** implémente le système de catégories
-- **tags** implémente le système de tags et utilise la biblithèque taggit pour son implémentation
+La structure du projet n'est pas celle par défaut produite par django-admin. Elle
+découpe le projet de la manière suivante:
+
+- **assets** accueille les fichiers javascript et scss dans le sous-répertoire src. On utilise webpack pour compiler les assets finaux avec la commande `npm run dev` ou `npm run dev:watch`.
+- **config/settings** accueille tous les fichiers de configuration pour le développement (local.py) pour le déploiement (heroku.py et production.py)
+- **id3as** accueille toutes les apps django composant le projet
+- **media** est le répertoire dans lequel sont éventuellement rangés les fichiers uploadés par l'utilisateur (p.ex. une image associée à l'idée de projet).
+- **tests** réunit les tests unitaires, d'intégration et fonctionnels
+
+Le projet a lui-même déjà été découpé en applications django comme suit:
+
+- **id3as/projects** implémente les idées de projets
+- **id3as/pages** implémente les pages statiques du site
+- **id3as/users** implémente le modèle utilisateur et le système d'authentification
+- **id3as/profiles** implémente le profil utilisateur avec la posibilité de gérer les idées de projet qu'il a proposées
+- **id3as/votes** implémente le système de vote sur les idées de projets
+- **id3as/categories** implémente le système de catégories
+- **id3as/tags** implémente le système de tags et utilise la biblithèque taggit pour son implémentation
 
 Ces différentes applications ont été préconfigurées dans le squellette de départ.
 

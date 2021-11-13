@@ -1,0 +1,23 @@
+# Environnements
+.env
+.venv/*
+!.venv/.gitkeep
+
+
+# Python cache files
+__pycache__ 
+*.pyc 
+
+# SQLite database files
+*.sqlite3
+
+# IDE-specific folders
+.vscode
+.idea
+
+# OS-specific files
+.DS_Store
+
+# npm dependencies
+node_modules
+webpack-stats.json
