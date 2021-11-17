@@ -15,7 +15,7 @@ urlpatterns = [
     path('categories/', include('id3as.categories.urls')),
     path('pages/', include('id3as.pages.urls')),
     path('profiles/', include('id3as.profiles.urls')),
-    path('projects/', include('id3as.projects.urls'),
+    path('projects/', include('id3as.projects.urls')),
     path('tags/', include('id3as.tags.urls')),
     path('users/', include('id3as.users.urls')),
     path('users/', include('django.contrib.auth.urls')), # auth urls
