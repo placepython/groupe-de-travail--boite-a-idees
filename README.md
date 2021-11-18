@@ -18,12 +18,11 @@ Une fois que pipenv est installé sur votre système, vous pouvez commencer le d
 1. Forkez le projet sur votre propre compte github
 2. Cloner votre fork avec git pour obtenir une version locale
 3. Ouvrez un terminal à la racine du projet
-4. Installer les dépendances du projet avec `$ pipenv install --dev` (pipenv est nécessaire ici. Voir plus haut)
-5. Installer les dépendances du front-end avec `cd assets && npm install && cd ..` (npm est nécessaire ici. Voir plus haut)
-6. Générer les fichiers front-end avec `cd assets && npm run dev && cd ..`
-7. Exécutez les migrations avec `$ pipenv run python manage.py migrate`. La version de développement utiliser sqlite comme base de données. La version de production utilise postgresql.
-8. Démarrez le serveur de développement avec `$ pipenv run python manage.py runserver`
-9. Accédez à l'application sur [http://localhost:8000](http://localhost:8000)
+4. Installer les dépendances du projet avec `$ pipenv install --dev`
+5. Exécutez les migrations avec `$ pipenv run python manage.py migrate`. La version de développement utiliser sqlite comme base de données. La version de production utilise postgresql.
+6. Générer les fichiers front avec `$ pipenv run python manage.py webpack`
+6. Démarrez le serveur de développement avec `$ pipenv run python manage.py runserver`
+7. Accédez à l'application sur [http://localhost:8000](http://localhost:8000)
 
 Vous pouvez éviter d'avoir à exécuter pipenv run à chaque fois en activant l'environnement
 virtuel à l'aide de la commande `pipenv shell`.

@@ -51,9 +51,10 @@ LOCAL_APPS = [
     'id3as.tags.apps.TagsConfig',
     'id3as.users.apps.UsersConfig',
     'id3as.votes.apps.VotesConfig',
+    'id3as.webpack.apps.WebpackConfig',
 ]
 
-INSTALLED_APPS = DJANGO_APPS + THIRD_PATHY_APPS + LOCAL_APPS
+INSTALLED_APPS = LOCAL_APPS + DJANGO_APPS + THIRD_PATHY_APPS
 
 SITE_ID = 1
 
