@@ -21,3 +21,4 @@ node_modules
 
 # webpack-related files
 webpack-stats.json
+dist

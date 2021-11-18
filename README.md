@@ -6,15 +6,24 @@ Cette application utilise le framework django dans sa dernière version 3.2. L'i
 
 ## Installation
 
-Les dépendances de ce projet sont gérée avec pipenv comme recommandé dans la documentation officielle de python. Pour ceux qui ne l'ont pas installé (si la commande `pipenv --version` vous donne une erreur), n'hésitez pas à l'installer à l'aide de pipx comme décrit dans [cette documentation](./docs/installer-pipenv.md). En plus de pipenv, vous aurez besoin de travailler avec la **version 3.9 de Python**. Une fois que pipenv est installé sur votre système, vous pouvez commencer le développement de ce projet en suivant les instruction ci-dessous:
+Les dépendances de ce projet sont gérée avec *pipenv* comme recommandé dans la [documentation officielle](https://packaging.python.org/tutorials/managing-dependencies/) sur le packaging python. Pour ceux qui ne l'ont pas installé (si la commande `pipenv --version` vous donne une erreur), n'hésitez pas à l'installer à l'aide de pipx comme décrit dans [cette documentation](./docs/installer-pipenv.md). En plus de pipenv, vous aurez besoin de travailler avec la **version 3.9 de Python**. 
+
+Les dépendance pour le front-end sont gérées à l'aide de node et de son package manager, npm. Il est donc nécessaire d'installer node
+sur votre ordinateur, si ce n'est pas déjà fait. Pour le savoir, exécuter la commande `npm --version` dans
+un terminal. Si vous obtenez une erreur, rendez-vous sur le [site web de node.js](https://nodejs.org/en/download/)
+et suivez les indications d'installation pour votre système.
+
+Une fois que pipenv est installé sur votre système, vous pouvez commencer le développement de ce projet en suivant les instruction ci-dessous:
 
 1. Forkez le projet sur votre propre compte github
 2. Cloner votre fork avec git pour obtenir une version locale
 3. Ouvrez un terminal à la racine du projet
-4. Installer les dépendances du projet avec `$ pipenv install --dev` (si pipenv n'est 
-6. Exécutez les migrations avec `$ pipenv run python manage.py migrate`. La version de développement utiliser sqlite comme base de données. La version de production utilise postgresql.
-7. Démarrez le serveur de développement avec `$ pipenv run python manage.py runserver`
-8. Accédez à l'application sur [http://localhost:8000](http://localhost:8000)
+4. Installer les dépendances du projet avec `$ pipenv install --dev` (pipenv est nécessaire ici. Voir plus haut)
+5. Installer les dépendances du front-end avec `cd assets && npm install && cd ..` (npm est nécessaire ici. Voir plus haut)
+6. Générer les fichiers front-end avec `cd assets && npm run dev && cd ..`
+7. Exécutez les migrations avec `$ pipenv run python manage.py migrate`. La version de développement utiliser sqlite comme base de données. La version de production utilise postgresql.
+8. Démarrez le serveur de développement avec `$ pipenv run python manage.py runserver`
+9. Accédez à l'application sur [http://localhost:8000](http://localhost:8000)
 
 Vous pouvez éviter d'avoir à exécuter pipenv run à chaque fois en activant l'environnement
 virtuel à l'aide de la commande `pipenv shell`.
