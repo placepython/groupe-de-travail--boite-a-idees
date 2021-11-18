@@ -12,10 +12,12 @@ Les dépendances de ce projet sont gérée avec pipenv comme recommandé dans la
 2. Cloner votre fork avec git pour obtenir une version locale
 3. Ouvrez un terminal à la racine du projet
 4. Installer les dépendances du projet avec `$ pipenv install --dev` (si pipenv n'est 
-5. Activez l'environnement virtuel avec `$ pipenv shell`
-6. Exécutez les migrations avec `$ python manage.py migrate`. La version de développement utiliser sqlite comme base de données. La version de production utilise postgresql.
-7. Démarrez le serveur de développement avec `$ python manage.py runserver`
+6. Exécutez les migrations avec `$ pipenv run python manage.py migrate`. La version de développement utiliser sqlite comme base de données. La version de production utilise postgresql.
+7. Démarrez le serveur de développement avec `$ pipenv run python manage.py runserver`
 8. Accédez à l'application sur [http://localhost:8000](http://localhost:8000)
+
+Vous pouvez éviter d'avoir à exécuter pipenv run à chaque fois en activant l'environnement
+virtuel à l'aide de la commande `pipenv shell`.
 
 ## Structure générale du projet
 

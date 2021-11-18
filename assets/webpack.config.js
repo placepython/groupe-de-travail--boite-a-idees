@@ -60,7 +60,10 @@ module.exports = ({ mode }) => {
                 filename: "css/[name].[contenthash].css",
                 chunkFilename: "[id].css"
             }),
-            new BundleTracker({filename: 'webpack-stats.json'})
+            new BundleTracker({
+                filename: 'webpack-stats.json', 
+                relativePath: true
+            })
         ]
     }, require(`./build-utils/webpack/${mode}`));
 };

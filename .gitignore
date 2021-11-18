@@ -18,4 +18,6 @@ __pycache__
 
 # npm dependencies
 node_modules
+
+# webpack-related files
 webpack-stats.json
